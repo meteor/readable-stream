@@ -34,11 +34,6 @@ var os = require('os');
 var child_process = require('child_process');
 var stream = require('../');
 
-/*<replacement>*/
-var util = require('core-util-is');
-util.inherits = require('inherits');
-/*</replacement>*/
-
 var Timer = { now: function () {} };
 var execSync = require('child_process').execSync;
 
@@ -670,7 +665,7 @@ function forEach(xs, f) {
 if (!util._errnoException) {
   var uv;
   util._errnoException = function (err, syscall) {
-    if (util.isUndefined(uv)) try {
+    if (typeof uv === "undefined") try {
       uv = process.binding('uv');
     } catch (e) {}
     var errname = uv ? uv.errname(err) : '';
