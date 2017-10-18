@@ -1,5 +1,5 @@
 {
-  "name": "readable-stream",
+  "name": "readable-stream-meteor",
   "version": "2.3.3",
   "description": "Streams3, a user-land copy of the stream library from Node.js",
   "main": "readable.js",
