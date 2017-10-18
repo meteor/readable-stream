@@ -65,11 +65,6 @@ var _require = require('child_process'),
 
 var stream = require('../../');
 
-/*<replacement>*/
-var util = require('core-util-is');
-util.inherits = require('inherits');
-/*</replacement>*/
-
 var Timer = { now: function () {} };
 
 var _require2 = require('./fixtures'),

@@ -161,17 +161,9 @@ module.exports['common.js'] = [
     ],
     [
         /require\(['"]stream['"]\)/g
-      , 'require(\'../../\')'
-    ],
-    [
-    /^var util = require\('util'\);/m
-  ,   '\n/*<replacement>*/\nvar util = require(\'core-util-is\');\n'
-    + 'util.inherits = require(\'inherits\');\n/*</replacement>*/\n'
+      , 'require(\'../\')'
+    ]
   ],
-  [
-  /^const util = require\('util'\);/m
-,   '\n/*<replacement>*/\nvar util = require(\'core-util-is\');\n'
-  + 'util.inherits = require(\'inherits\');\n/*</replacement>*/\n'
 ]
 , [
   /process\.binding\('timer_wrap'\)\.Timer;/,

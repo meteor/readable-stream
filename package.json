@@ -4,7 +4,6 @@
   "description": "Streams3, a user-land copy of the stream library from Node.js",
   "main": "readable.js",
   "dependencies": {
-    "core-util-is": "~1.0.0",
     "inherits": "~2.0.3",
     "isarray": "~1.0.0",
     "process-nextick-args": "~2.0.0",
