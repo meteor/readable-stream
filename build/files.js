@@ -41,12 +41,6 @@ const headRegexp = /(^module.exports = \w+;?)/m
     , altIndexOfImplReplacement = require('./common-replacements').altIndexOfImplReplacement
     , altIndexOfUseReplacement  = require('./common-replacements').altIndexOfUseReplacement
 
-    , utilReplacement = [
-          /^const util = require\('util'\);/m
-        ,   '\n/*<replacement>*/\nconst util = require(\'core-util-is\');\n'
-          + 'util.inherits = require(\'inherits\');\n/*</replacement>*/\n'
-      ]
-
     , debugLogReplacement = [
           /const debug = util.debuglog\('stream'\);/
       ,   '\n\n/*<replacement>*/\nconst debugUtil = require(\'util\');\n'

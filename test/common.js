@@ -58,11 +58,6 @@ var child_process = require('child_process');
 var stream = require('../');
 var buffer = require('buffer');
 
-/*<replacement>*/
-var util = require('core-util-is');
-util.inherits = require('inherits');
-/*</replacement>*/
-
 var Timer = { now: function () {} };
 var execSync = require('child_process').execSync;
 
